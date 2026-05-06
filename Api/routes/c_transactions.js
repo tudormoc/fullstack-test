@@ -1,0 +1,21 @@
+// Company-scoped transaction routes (c_ prefix = mounted under /companies/:companyId/transactions)
+const express = require('express');
+const controller = require('../controllers/transactions');
+const { isAuth } = require('../middlewares/isAuth');
+const rbac = require('../middlewares/rbac');
+const { validator } = require('../middlewares/validator');
+
+const router = express.Router({ mergeParams: true });
+
+router
+  .route('/')
+  .get(isAuth, rbac('transactions', 'read'), controller.get)
+  .post(validator('createTransaction'), isAuth, rbac('transactions', 'create'), controller.create);
+
+router
+  .route('/:id')
+  .get(validator({ params: 'id' }), isAuth, rbac('transactions', 'read'), controller.getById)
+  .patch(validator({ params: 'id', body: 'updateTransaction' }), isAuth, rbac('transactions', 'update'), controller.update)
+  .delete(validator({ params: 'id' }), isAuth, rbac('transactions', 'delete'), controller.delete);
+
+module.exports = router;
