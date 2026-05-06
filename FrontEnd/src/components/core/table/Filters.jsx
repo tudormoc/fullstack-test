@@ -33,10 +33,12 @@ const Filters = ({ filters, title, onClose, onClear, showFilter, showReset = fal
       onClose={onClose}
       open={showFilter}
       // getContainer={document.getElementById('title-box')}
-      contentWrapperStyle={{
-        boxShadow: 'none',
-        borderLeft: `1px solid ${token.colorBorder}`,
-        top: topGap || token.drawerTop
+      styles={{
+        wrapper: {
+          boxShadow: 'none',
+          borderLeft: `1px solid ${token.colorBorder}`,
+          top: topGap || token.drawerTop
+        }
       }}
       extra={
         showReset && (

@@ -44,7 +44,23 @@
     "filter": "Filtra",
     "home": "Home",
     "new": "Nuovo",
-    "ok": "Ok"
+    "ok": "Ok",
+    "loading": "Caricamento",
+    "amount": "Importo",
+    "date": "Data",
+    "clearFilters": "Resetta Filtri"
+  },
+  "transactions": {
+    "title": "Transazioni",
+    "expense": "Spesa",
+    "income": "Entrata",
+    "addTransaction": "Nuova Transazione",
+    "editTransaction": "Modifica Transazione",
+    "totalIncome": "Totale Entrate",
+    "totalExpenses": "Totale Spese",
+    "balance": "Bilancio",
+    "allTypes": "Tutti i Tipi",
+    "noTransactions": "Nessuna transazione. Clicca + per aggiungerne una."
   },
   "login": {
     "btn": "Accedi",

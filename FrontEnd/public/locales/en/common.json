@@ -44,7 +44,23 @@
     "filter": "Filter",
     "home": "Home",
     "new": "Nuovo",
-    "ok": "Ok"
+    "ok": "Ok",
+    "loading": "Loading",
+    "amount": "Amount",
+    "date": "Date",
+    "clearFilters": "Clear Filters"
+  },
+  "transactions": {
+    "title": "Transactions",
+    "expense": "Expense",
+    "income": "Income",
+    "addTransaction": "New Transaction",
+    "editTransaction": "Edit Transaction",
+    "totalIncome": "Total Income",
+    "totalExpenses": "Total Expenses",
+    "balance": "Balance",
+    "allTypes": "All Types",
+    "noTransactions": "No transactions yet. Click + to add one."
   },
   "login": {
     "btn": "Sign In",

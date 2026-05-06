@@ -1,0 +1,123 @@
+/* Transaction page styles — premium card design with subtle gradients */
+
+.transaction-summary-row {
+  margin-bottom: 1.5rem;
+}
+
+/* Summary cards with gradient top border accent */
+.transaction-summary-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  position: relative;
+}
+
+.transaction-summary-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 14px 14px 0 0;
+}
+
+.transaction-summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.dark .transaction-summary-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Income card accent */
+.summary-income::before {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+/* Expense card accent */
+.summary-expense::before {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+/* Balance card accent */
+.summary-balance::before {
+  background: linear-gradient(90deg, #4f46e5, #818cf8);
+}
+
+/* Statistic value styling */
+.transaction-summary-card .ant-statistic-title {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.transaction-summary-card .ant-statistic-content {
+  font-weight: 700;
+}
+
+.transaction-summary-card .ant-statistic-content-prefix {
+  margin-right: 6px;
+  font-size: 16px;
+}
+
+/* Transaction type tags */
+.transaction-tag {
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.transaction-tag-income {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+.transaction-tag-expense {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+.dark .transaction-tag-income {
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+}
+
+.dark .transaction-tag-expense {
+  background: rgba(248, 113, 113, 0.15);
+  color: #f87171;
+}
+
+/* Amount column styling */
+.transaction-amount {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+
+.transaction-amount-income {
+  color: #059669;
+}
+
+.transaction-amount-expense {
+  color: #dc2626;
+}
+
+.dark .transaction-amount-income {
+  color: #34d399;
+}
+
+.dark .transaction-amount-expense {
+  color: #f87171;
+}
